@@ -66,7 +66,7 @@ int main()
 	clock_t starttime = clock();
 	while (1 == 1)
 	{
-		if (points != 5)
+		if (points != 20)
 		{
 			scanf(" %c", &keypress);
  			if (tolower(keypress) == 'd' && guy != 8)
