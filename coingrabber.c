@@ -17,7 +17,6 @@ void delay(int second)
 	clock_t secondtimer = clock();
 	while (clock() < (secondtimer + second *1000));
 }
-	//void delay(unsigned int)
 int main()
 {
  	coin = rand() % 9;
