@@ -105,20 +105,25 @@ int main()
 				fprintf(file, "%.3f", timetaken / 1000);
 			}
 			printf("\nHigh: %.3f", high);
+			printf("\nYour Time: %.3f", timetaken / 1000);
 			fclose(file);
-			/*
-			HELP PLS:
+			asktorestart:
 			printf("\nPlay again? (y/n): ");
 			scanf(" %c", &keypress);
-			
 			if(tolower(keypress) == 'y'){
 				file = fopen("C:\\ProgramData\\coingrabberhighC.txt", "r");
 				goto start;
 			}
-			else{
-				return 0;
+			else if(tolower(keypress) != 'n'){
+				goto asktorestart;
 			}
-			*/
+			ytoexit:
+			printf("Press y to exit: ");
+			scanf(" %c", &keypress);
+			if(tolower(keypress) == 'y'){
+			return 0;
+			}
+			else goto ytoexit;
 	   }
  	}
 }
